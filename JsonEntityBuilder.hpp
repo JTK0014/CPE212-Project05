@@ -20,6 +20,7 @@ struct EntityBuilder
     uint32_t agility;
     uint32_t intelligence;
     uint32_t wisdom;
+    uint32_t luck;
 
     uint32_t weapon_damage;
 
@@ -51,6 +52,7 @@ class JsonEntityBuilder
     const std::string STR_AGI = "agility";
     const std::string STR_INT = "intelligence";
     const std::string STR_WIS = "wisdom";
+    const std::string STR_LUC = "luck";
     const std::string STR_DAM = "weapon_damage";
     const std::string STR_UID = "UID";
     const std::string STR_INVENTORY = "inventory";

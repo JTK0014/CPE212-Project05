@@ -35,11 +35,11 @@ endif
 
 
 
-Project04: game.o entityBuilder.o itemBuilder.o encounter.o warrior.o monster.o priest.o rogue.o mage.o entity.o inventory.o item.o
-	$(COMPILER) game.o entity.o encounter.o warrior.o monster.o mage.o rogue.o priest.o entityBuilder.o itemBuilder.o inventory.o item.o -o Project04
+Project05: game.o entityBuilder.o itemBuilder.o encounter.o warrior.o monster.o priest.o rogue.o mage.o gambler.o entity.o inventory.o item.o
+	$(COMPILER) game.o entity.o encounter.o warrior.o monster.o mage.o gambler.o rogue.o priest.o entityBuilder.o itemBuilder.o inventory.o item.o -o Project05
 
 
-game.o: main.cpp entity.hpp warrior.hpp mage.hpp rogue.hpp priest.hpp JsonEntityBuilder.hpp json.hpp
+game.o: main.cpp entity.hpp warrior.hpp mage.hpp gambler.hpp rogue.hpp priest.hpp JsonEntityBuilder.hpp json.hpp
 	$(COMPILER) -c -std=c++11 main.cpp -o game.o
 
 
@@ -76,9 +76,11 @@ rogue.o: rogue.cpp rogue.hpp entity.hpp JsonEntityBuilder.hpp json.hpp
 priest.o: priest.cpp priest.hpp entity.hpp JsonEntityBuilder.hpp json.hpp
 	$(COMPILER) -c -std=c++11 priest.cpp -o priest.o
 
+gambler.o: gambler.cpp gambler.hpp entity.hpp JsonEntityBuilder.hpp json.hpp
+	$(COMPILER) -c -std=c++11 gambler.cpp -o gambler.o
 
 # goblin.o: goblin.cpp goblin.hpp character.hpp inventory.hpp
 # 	g++ -c goblin.cpp
 
 clean:
-	rm *.o Project04
+	rm *.o Project05

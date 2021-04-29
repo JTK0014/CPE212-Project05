@@ -13,6 +13,7 @@
 #include "mage.hpp"
 #include "rogue.hpp"
 #include "priest.hpp"
+#include "gambler.hpp"
 
 
 
@@ -91,6 +92,9 @@ int main(int argc, char *argv[])
                 case 'p':
                     encounter.AddEntity(new Priest(builder, inventory, id));
                     break;
+                case 'g':
+                    encounter.AddEntity(new Gambler(builder, inventory, id));
+                    break;                    
                 default: 
                     std::cout << "Invalid character found:\n" << line << std::endl;
                     std::cout << "Type: " << type << std::endl;

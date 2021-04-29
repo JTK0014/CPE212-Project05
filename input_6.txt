@@ -1,0 +1,15 @@
+c "Gambler test"
+c "Add multiple mobs and fight"
+c "verify that attack damage varies"
+
+s p g 21
+
+s e 14
+s e 12
+s e 13
+
+a 21 14 weapon_attack
+a 21 12 dice_throw
+a 21 13 pick_a_card
+
+p a

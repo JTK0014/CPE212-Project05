@@ -97,6 +97,10 @@ EntityBuilder JsonEntityBuilder::BuildEntity(uint32_t uid)
     {
         entity.wisdom = itemFound[STR_WIS];
     }
+    if(itemFound.contains(STR_LUC))
+    {
+        entity.luck = itemFound[STR_LUC];
+    }
 
     if(itemFound.contains(STR_DAM))
     {
