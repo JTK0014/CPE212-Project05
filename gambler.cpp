@@ -10,13 +10,15 @@ Gambler::Gambler(JsonEntityBuilder &builder, JsonItemBuilder & inventory, uint32
 
 void Gambler::DiceThrow(Entity * target)
 {
-    Attack(target, GetLuck() * 0.5, "Dice Throw");
+    std::srand(time(0));
+    Attack(target, std::rand()%GetLuck(), "Dice Throw");
 }
 
 
 void Gambler::PickACard(Entity *target)
 {
-    Attack(target, GetLuck() * 2.0, "Pick a Card");
+    std::srand(time(0));
+    Attack(target, std::rand()%GetLuck() * 3.0, "Pick a Card");
 }
 
 
@@ -24,7 +26,7 @@ void Gambler::OutputStatus() const
 {
     std::cout << Class() << ": " << this->Name()
                 << "\n\tCurrent HP: " << this->CurrentHP()
-                << "\n\tLuck: " << this->GetWisdom()
+                << "\n\tLuck: " << this->GetLuck()
                 << std::endl;
                 
     PrintInventory();
